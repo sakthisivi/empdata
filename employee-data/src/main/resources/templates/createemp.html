@@ -3,36 +3,50 @@
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 	layout:decorator="default">
 <head>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	<link
 		href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
 		rel="stylesheet" id="bootstrap-css">
 	<link rel="stylesheet" href="css/style.css">
+	
 	<script
 		src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-	<script
-		src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.bundle.min.js"></script>
+	
 	<title>Create Employee</title>
+	
 </head>
 
 <body>
-	<h2>Create Employee</h2>
-		<form action="/save">
+<div class="form-row ">
+				<div class="col-sm12">
+                 <h3>
+                <a href="/home" class="btn btn-primary"><span class="glyphicon"></span>Home</a>
+                </h3></div>
+                <div class="col-sm12">
+                <h3>
+                    <a href="/employee" class="btn btn-primary"><span class="glyphicon"></span>View Employees</a>
+                </h3>
+                </div>
+                </div>
+
+	<h2><a href="#" class="btn btn-primary"><span class="glyphicon"></span>Create Employee</a></h2>
+		<form action="/save" method="post">
 		
 			<div class="form-row ">
 				<div class="col-md-4 mb-3">
 					<label for="empid">Employee ID</label> <input type="text"
 						class="form-control-create-emp" id="empid"
-						placeholder="First name" value="EmpID" required>
+						placeholder="EmpID" required>
 				</div>
 				<div class="col-md-4 mb-3">
 					<label for="firstname">First name</label> <input type="text"
 						class="form-control-create-emp" id="firstname"
-						placeholder="First name" value="First Name" required>
+						placeholder="First name"  required>
 				</div>
 				<div class="col-md-4 mb-3">
 					<label for="lastname">Last name</label> <input type="text"
 						class="form-control-create-emp" id="lastname"
-						placeholder="First name" value="Last Name" required>
+						placeholder="Last name"  required>
 				</div>
 				</div>
 				
@@ -40,22 +54,22 @@
 				<div class="col-md-3 mb-3">
 					<label for="billstartdate">Bill_Start_date</label> <input type="text"
 						class="form-control-create-emp" id="billstartdate"
-						placeholder="First name" value="Bill Date" required>
+						placeholder="Bill Start Date"  required>
 				</div>
 				<div class="col-md-3 mb-3">
 					<label for="designation">Designation</label> <input type="text"
 						class="form-control-create-emp" id="designation"
-						placeholder="First name" value="Designation" required>
+						placeholder="Designation" required>
 				</div>
 				<div class="col-md-3 mb-3">
 					<label for="type">Type</label> <input type="text"
 						class="form-control-create-emp" id="type"
-						placeholder="First name" value="Type" required>
+						placeholder="Type"  required>
 				</div>
 				<div class="col-md-3 mb-3">
 					<label for="location">Location</label> <input type="text"
 						class="form-control-create-emp" id="location"
-						placeholder="First name" value="Location" required>
+						placeholder="Location"  required>
 				</div>
 				</div>
 				
@@ -63,17 +77,17 @@
 				<div class="col-md-3 mb-3">
 					<label for="city">City</label> <input type="text"
 						class="form-control-create-emp" id="city"
-						placeholder="First name" value="City" required>
+						placeholder="City"  required>
 				</div>
 				<div class="col-md-3 mb-3">
 					<label for="grade">Grade</label> <input type="text"
 						class="form-control-create-emp" id="grade"
-						placeholder="First name" value="Grade" required>
+						placeholder="Grade"  required>
 				</div>
 				<div class="col-md-3 mb-3">
 					<label for="mobnum">Mob_Num</label> <input type="text"
 						class="form-control-create-emp" id="mobnum"
-						placeholder="Mobile Num" value="Mobile" required>
+						placeholder="Mobile Num"  required>
 				</div>
 				<div class="col-md-3 mb-3">
 					<label for="won">WON</label> <input type="text"
@@ -86,6 +100,25 @@
 				<button type="submit" class="btn btn-success btn-lg float-right">Save</button>
 			
 	</form>
-	
+	<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
 </body>
 </html>
