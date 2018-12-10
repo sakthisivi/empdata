@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="default">
+<head>
+	<link
+		href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+		rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="css/style.css">
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.bundle.min.js"></script>
+	<title>Create Employee</title>
+</head>
+
+<body>
+	<h2>Create Employee</h2>
+		<form action="/save">
+		
+			<div class="form-row ">
+				<div class="col-md-4 mb-3">
+					<label for="empid">Employee ID</label> <input type="text"
+						class="form-control-create-emp" id="empid"
+						placeholder="First name" value="EmpID" required>
+				</div>
+				<div class="col-md-4 mb-3">
+					<label for="firstname">First name</label> <input type="text"
+						class="form-control-create-emp" id="firstname"
+						placeholder="First name" value="First Name" required>
+				</div>
+				<div class="col-md-4 mb-3">
+					<label for="lastname">Last name</label> <input type="text"
+						class="form-control-create-emp" id="lastname"
+						placeholder="First name" value="Last Name" required>
+				</div>
+				</div>
+				
+				<div class="form-row">
+				<div class="col-md-3 mb-3">
+					<label for="billstartdate">Bill_Start_date</label> <input type="text"
+						class="form-control-create-emp" id="billstartdate"
+						placeholder="First name" value="Bill Date" required>
+				</div>
+				<div class="col-md-3 mb-3">
+					<label for="designation">Designation</label> <input type="text"
+						class="form-control-create-emp" id="designation"
+						placeholder="First name" value="Designation" required>
+				</div>
+				<div class="col-md-3 mb-3">
+					<label for="type">Type</label> <input type="text"
+						class="form-control-create-emp" id="type"
+						placeholder="First name" value="Type" required>
+				</div>
+				<div class="col-md-3 mb-3">
+					<label for="location">Location</label> <input type="text"
+						class="form-control-create-emp" id="location"
+						placeholder="First name" value="Location" required>
+				</div>
+				</div>
+				
+				<div class="form-row">
+				<div class="col-md-3 mb-3">
+					<label for="city">City</label> <input type="text"
+						class="form-control-create-emp" id="city"
+						placeholder="First name" value="City" required>
+				</div>
+				<div class="col-md-3 mb-3">
+					<label for="grade">Grade</label> <input type="text"
+						class="form-control-create-emp" id="grade"
+						placeholder="First name" value="Grade" required>
+				</div>
+				<div class="col-md-3 mb-3">
+					<label for="mobnum">Mob_Num</label> <input type="text"
+						class="form-control-create-emp" id="mobnum"
+						placeholder="Mobile Num" value="Mobile" required>
+				</div>
+				<div class="col-md-3 mb-3">
+					<label for="won">WON</label> <input type="text"
+						class="form-control-create-emp" id="won"
+						placeholder="WON#" value="WON" required>
+				</div>
+				</div>
+				
+				
+				<button type="submit" class="btn btn-success btn-lg float-right">Save</button>
+			
+	</form>
+	
+</body>
+</html>

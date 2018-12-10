@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="default">
+    <head>
+        <title>Edit Employee</title>
+    </head>
+    <body>
+        <div layout:fragment="content" class="row">
+            <div class="col-xs-8 col-md-8">
+                <h3>
+                    <a href="/employee" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list"></span> Employee</a>
+                </h3>
+                <h2>Edit Employee</h2>
+                <form action="/update">
+                                                   
+                    <div class="form-group">
+                        <label for="id">Emp Id:</label>
+                        <input type="text" class="form-control" name="id" th:value="${employee.Id}"/>
+                    </div>
+                     <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" name="name" th:value="${employee.Name}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="bill_start_date">Bill_Start_date</label>
+                        <input type="text" class="form-control" name="bill_start_date" th:value="${employee.Bill_Start_date;}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="designation">Designation</label>
+                        <input type="text" class="form-control" name="designation" th:value="${employee.Designation;}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type:</label>
+                        <input type="text" class="form-control" name="type" th:value="${employee.Type}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input type="text" class="form-control" name="location" th:value="${employee.Location}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" class="form-control" name="city" th:value="${employee.City}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="grade">Grade:</label>
+                        <input type="text" class="form-control" name="grade" th:value="${employee.Grade}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobilenum">Mob_Num:</label>
+                        <input type="text" class="form-control" name="mobilenum" th:value="${employee.Mob_Num}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="won">WON:</label>
+                        <input type="text" class="form-control" name="won" th:value="${employee.WON}"/>
+                    </div>
+                    <input type="hidden" name="id" th:value="${product.Id}" />
+                    <button type="submit" class="btn btn-success">Save</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
